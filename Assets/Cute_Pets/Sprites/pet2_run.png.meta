@@ -1,0 +1,623 @@
+fileFormatVersion: 2
+guid: b0a9f71ec280174468d0275c94f4e413
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3811214569035462967
+    second: pet2_run_0
+  - first:
+      213: 6245501012415458042
+    second: pet2_run_1
+  - first:
+      213: -3954568217632135995
+    second: pet2_run_2
+  - first:
+      213: -6900417827587641802
+    second: pet2_run_3
+  - first:
+      213: -827664321819450414
+    second: pet2_run_4
+  - first:
+      213: 7818613658015252645
+    second: pet2_run_5
+  - first:
+      213: -6241565302123951372
+    second: pet2_run_6
+  - first:
+      213: 7425800020063713146
+    second: pet2_run_7
+  - first:
+      213: -5945044109417511542
+    second: pet2_run_8
+  - first:
+      213: 5644300350952863579
+    second: pet2_run_9
+  - first:
+      213: -5518353349867413863
+    second: pet2_run_10
+  - first:
+      213: -2246050692541170636
+    second: pet2_run_11
+  - first:
+      213: 3239818861013464467
+    second: pet2_run_12
+  - first:
+      213: -8340684459550482740
+    second: pet2_run_13
+  - first:
+      213: 7233662802408031160
+    second: pet2_run_14
+  - first:
+      213: 684054879003970637
+    second: pet2_run_15
+  - first:
+      213: 5436103306332860444
+    second: pet2_run_16
+  - first:
+      213: 1292152348011472295
+    second: pet2_run_17
+  - first:
+      213: 3649305479052137525
+    second: pet2_run_18
+  - first:
+      213: -223642952567125234
+    second: pet2_run_19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pet2_run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c609d9ca88db1bc0800000000000000
+      internalID: -3811214569035462967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_1
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaad59a41a7ca650800000000000000
+      internalID: 6245501012415458042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_2
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4acf3882d8e19c0800000000000000
+      internalID: -3954568217632135995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_3
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63eadd8bb8acc30a0800000000000000
+      internalID: -6900417827587641802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_4
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3efa83fab8384f0800000000000000
+      internalID: -827664321819450414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0440a72bb418c60800000000000000
+      internalID: 7818613658015252645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_6
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa8f7c4d618169a0800000000000000
+      internalID: -6241565302123951372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_7
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a777cf056cdbd0760800000000000000
+      internalID: 7425800020063713146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_8
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85042471e5fe7da0800000000000000
+      internalID: -5945044109417511542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_9
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b577820b345945e40800000000000000
+      internalID: 5644300350952863579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ed014addeda63b0800000000000000
+      internalID: -5518353349867413863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_11
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c30939bcc64d0e0800000000000000
+      internalID: -2246050692541170636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_12
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395715bb61626fc20800000000000000
+      internalID: 3239818861013464467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_13
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce5fd4ccafef3c80800000000000000
+      internalID: -8340684459550482740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_14
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3cc724ef1236460800000000000000
+      internalID: 7233662802408031160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c87e5c9404e7900800000000000000
+      internalID: 684054879003970637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_16
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10fb48c72be07b40800000000000000
+      internalID: 5436103306332860444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_17
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a529e2e6b5aee110800000000000000
+      internalID: 1292152348011472295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_18
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5341ac39fffe4a230800000000000000
+      internalID: 3649305479052137525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet2_run_19
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b87b76be575ecf0800000000000000
+      internalID: -223642952567125234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pet2_run_13: -8340684459550482740
+      pet2_run_16: 5436103306332860444
+      pet2_run_6: -6241565302123951372
+      pet2_run_14: 7233662802408031160
+      pet2_run_2: -3954568217632135995
+      pet2_run_3: -6900417827587641802
+      pet2_run_4: -827664321819450414
+      pet2_run_18: 3649305479052137525
+      pet2_run_8: -5945044109417511542
+      pet2_run_0: -3811214569035462967
+      pet2_run_7: 7425800020063713146
+      pet2_run_11: -2246050692541170636
+      pet2_run_1: 6245501012415458042
+      pet2_run_9: 5644300350952863579
+      pet2_run_17: 1292152348011472295
+      pet2_run_19: -223642952567125234
+      pet2_run_5: 7818613658015252645
+      pet2_run_15: 684054879003970637
+      pet2_run_12: 3239818861013464467
+      pet2_run_10: -5518353349867413863
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

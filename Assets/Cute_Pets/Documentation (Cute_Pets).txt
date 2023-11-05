@@ -1,0 +1,39 @@
+	
+--------------Cute Pets 2D---------------------------
+
+This package contains 2D animated Cute Pets, that will perfectly fit in a side scrolling platformer games and any other type of games.All animations are Sprite-sheet animations.You can use the package commercially and non-commercially
+
+Technical Details:-
+		
+		- Character's : 3 (Pet_Orange, Pet_Pink, Pet_Grape)
+		- Animations : 2 (Idle, Walk/Run)
+		- Design type : Cartoony, 2D
+		- File format : PNG
+		- Sprite resolution :  3045 x 2532 (Idle), 3045 x1688 (run)
+			
+			
+Features:-
+	- Different unique Cute pets
+	- funny character
+	- Smooth loop animations
+	- Easy to adjust speed of the default animation's using unity editor
+	- Prefabs included
+	- Rigidbody, 2D Box colliders attached
+	- Drag and drop and use
+	- Well arranged folders
+	- High quality images
+	- Mobile supported
+	- Demo scenes & Guides included
+	
+How to use:-
+	
+	Simply drag and drop any prefab from(Cute Pets > Prefabs) folder
+	to your scene and use it.
+
+..................................................................................
+
+About Me : "SR Studios Kerala", Indie Game developer & 3D-2D Genaralist Artist from Alappuzha, Kerala, India
+
+Contact : srstudioskerala@gmail.com
+
+................Thank you for downloading this package................................

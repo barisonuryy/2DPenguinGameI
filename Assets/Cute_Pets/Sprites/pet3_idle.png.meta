@@ -1,0 +1,873 @@
+fileFormatVersion: 2
+guid: d69d03385122ff34d9afdbbfc6f9b704
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2112666444315720799
+    second: pet3_idle_0
+  - first:
+      213: 1084718861005138910
+    second: pet3_idle_1
+  - first:
+      213: -2964114444004898637
+    second: pet3_idle_2
+  - first:
+      213: 7902426086324682395
+    second: pet3_idle_3
+  - first:
+      213: -1010578244799061286
+    second: pet3_idle_4
+  - first:
+      213: -8790946250544291424
+    second: pet3_idle_5
+  - first:
+      213: 4740789520272749463
+    second: pet3_idle_6
+  - first:
+      213: -5156742264540297575
+    second: pet3_idle_7
+  - first:
+      213: 6875500810140527198
+    second: pet3_idle_8
+  - first:
+      213: -7215067345890487933
+    second: pet3_idle_9
+  - first:
+      213: -4096855996994628501
+    second: pet3_idle_10
+  - first:
+      213: 6633816159588277521
+    second: pet3_idle_11
+  - first:
+      213: 1185230793385008153
+    second: pet3_idle_12
+  - first:
+      213: 1754829090376412488
+    second: pet3_idle_13
+  - first:
+      213: -8322601356520778380
+    second: pet3_idle_14
+  - first:
+      213: 5688380993208913097
+    second: pet3_idle_15
+  - first:
+      213: -7717950268591059393
+    second: pet3_idle_16
+  - first:
+      213: -6172638567151709140
+    second: pet3_idle_17
+  - first:
+      213: -170561522834297891
+    second: pet3_idle_18
+  - first:
+      213: -5820256309063644360
+    second: pet3_idle_19
+  - first:
+      213: 9048721827517182863
+    second: pet3_idle_20
+  - first:
+      213: -7417168894669697818
+    second: pet3_idle_21
+  - first:
+      213: 2874017420836407228
+    second: pet3_idle_22
+  - first:
+      213: -1912207222274123754
+    second: pet3_idle_23
+  - first:
+      213: 6605360849249252317
+    second: pet3_idle_24
+  - first:
+      213: 3735884326763559540
+    second: pet3_idle_25
+  - first:
+      213: -1955993258531780958
+    second: pet3_idle_26
+  - first:
+      213: 5735971185726894835
+    second: pet3_idle_27
+  - first:
+      213: -7400939078182163496
+    second: pet3_idle_28
+  - first:
+      213: 3792803482230778664
+    second: pet3_idle_29
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pet3_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2110
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c735e00f2b15d10800000000000000
+      internalID: 2112666444315720799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_1
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 2110
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edba0679e02bd0f00800000000000000
+      internalID: 1084718861005138910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_2
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 2110
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8cb732e995dd6d0800000000000000
+      internalID: -2964114444004898637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 2110
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9eb92b18ae0bad60800000000000000
+      internalID: 7902426086324682395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_4
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 2110
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2a30dc074b9f1f0800000000000000
+      internalID: -1010578244799061286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1688
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a161c826f8400680800000000000000
+      internalID: -8790946250544291424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_6
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1688
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79370ce63faaac140800000000000000
+      internalID: 4740789520272749463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_7
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1688
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99605d36b329f68b0800000000000000
+      internalID: -5156742264540297575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_8
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1688
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a26511f8faa6f50800000000000000
+      internalID: 6875500810140527198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_9
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1688
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3815da9d97eeedb90800000000000000
+      internalID: -7215067345890487933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64d4334d2b0527c0800000000000000
+      internalID: -4096855996994628501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_11
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d518156ac001c50800000000000000
+      internalID: 6633816159588277521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_12
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c51908029c27010800000000000000
+      internalID: 1185230793385008153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_13
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d686d92c76a5810800000000000000
+      internalID: 1754829090376412488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_14
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1266
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4751569492e208c80800000000000000
+      internalID: -8322601356520778380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc0d4fff5031fe40800000000000000
+      internalID: 5688380993208913097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_16
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ecf764f1554e490800000000000000
+      internalID: -7717950268591059393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_17
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24db0e5de1665aa0800000000000000
+      internalID: -6172638567151709140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_18
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbac1bd23b02adf0800000000000000
+      internalID: -170561522834297891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_19
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 844
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b098459bb4a3fa0800000000000000
+      internalID: -5820256309063644360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f833c785f84839d70800000000000000
+      internalID: 9048721827517182863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_21
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecc22a203ce01990800000000000000
+      internalID: -7417168894669697818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_22
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb70d37fd9f82e720800000000000000
+      internalID: 2874017420836407228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_23
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6181a63a9a97675e0800000000000000
+      internalID: -1912207222274123754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_24
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 422
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd336c812b4faab50800000000000000
+      internalID: 6605360849249252317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47af0ba600788d330800000000000000
+      internalID: 3735884326763559540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_26
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a68722ae7aead4e0800000000000000
+      internalID: -1955993258531780958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_27
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2b02727634a9f40800000000000000
+      internalID: 5735971185726894835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_28
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db25a8ce159a4990800000000000000
+      internalID: -7400939078182163496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pet3_idle_29
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 0
+        width: 609
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bea350caeb2a430800000000000000
+      internalID: 3792803482230778664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pet3_idle_1: 1084718861005138910
+      pet3_idle_23: -1912207222274123754
+      pet3_idle_12: 1185230793385008153
+      pet3_idle_0: 2112666444315720799
+      pet3_idle_3: 7902426086324682395
+      pet3_idle_7: -5156742264540297575
+      pet3_idle_24: 6605360849249252317
+      pet3_idle_6: 4740789520272749463
+      pet3_idle_2: -2964114444004898637
+      pet3_idle_14: -8322601356520778380
+      pet3_idle_28: -7400939078182163496
+      pet3_idle_8: 6875500810140527198
+      pet3_idle_9: -7215067345890487933
+      pet3_idle_10: -4096855996994628501
+      pet3_idle_20: 9048721827517182863
+      pet3_idle_21: -7417168894669697818
+      pet3_idle_27: 5735971185726894835
+      pet3_idle_22: 2874017420836407228
+      pet3_idle_5: -8790946250544291424
+      pet3_idle_15: 5688380993208913097
+      pet3_idle_29: 3792803482230778664
+      pet3_idle_17: -6172638567151709140
+      pet3_idle_25: 3735884326763559540
+      pet3_idle_11: 6633816159588277521
+      pet3_idle_18: -170561522834297891
+      pet3_idle_13: 1754829090376412488
+      pet3_idle_19: -5820256309063644360
+      pet3_idle_16: -7717950268591059393
+      pet3_idle_26: -1955993258531780958
+      pet3_idle_4: -1010578244799061286
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
