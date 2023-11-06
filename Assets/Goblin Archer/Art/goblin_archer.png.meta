@@ -1,0 +1,675 @@
+fileFormatVersion: 2
+guid: 7ac6e9b292f137147b3df877cbc2523c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 2
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin_L_ear
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 890
+        width: 108
+        height: 109
+      alignment: 9
+      pivot: {x: 0.8352038, y: 0.08062016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5b813e828cdccb0800000000000000
+      internalID: -4841993946419120697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_ear
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 901
+        width: 49
+        height: 113
+      alignment: 9
+      pivot: {x: 0.33972666, y: 0.08836054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32608aa14f83da190800000000000000
+      internalID: -7949635146168662493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_head
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 681
+        width: 261
+        height: 326
+      alignment: 9
+      pivot: {x: 0.2622199, y: 0.43654346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadc28f6f8293ce50800000000000000
+      internalID: 6828462604772625837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_brow
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 821
+        width: 106
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2a552f7bbc9a300800000000000000
+      internalID: 263966044083036845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_brow
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 820
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0233e99ccb9eec9d0800000000000000
+      internalID: -2752005325231082720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_eye
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 715
+        width: 80
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce21d4d0abfb76050800000000000000
+      internalID: 5793810251443409644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_eye
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 717
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1e8e326750d2cf0800000000000000
+      internalID: -275557997232987735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_hand
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 554
+        width: 50
+        height: 63
+      alignment: 9
+      pivot: {x: 0.719913, y: 0.18833221}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a3648753c8efc60800000000000000
+      internalID: 7853868961459747356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_body
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 270
+        width: 161
+        height: 368
+      alignment: 9
+      pivot: {x: 0.37151, y: 0.14866066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21905822b2eb99ff0800000000000000
+      internalID: -28782830129182446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 387
+        width: 66
+        height: 124
+      alignment: 9
+      pivot: {x: 0.7975013, y: 0.081962585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2cab71373efea280800000000000000
+      internalID: -9030000689824420819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_upperarm
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 499
+        width: 93
+        height: 44
+      alignment: 9
+      pivot: {x: 0.07773976, y: 0.74990153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2d25dfd548a0a00800000000000000
+      internalID: 723536229363274407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 486
+        width: 93
+        height: 42
+      alignment: 9
+      pivot: {x: 0.08618492, y: 0.7618016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4baf69745685fb200800000000000000
+      internalID: 197974100643609268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_hand
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 460
+        width: 50
+        height: 68
+      alignment: 9
+      pivot: {x: 0.26437867, y: 0.11884802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c607006cbdbf4e70800000000000000
+      internalID: 9101701988701636292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_upperarm
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 393
+        width: 68
+        height: 104
+      alignment: 9
+      pivot: {x: 0.85805154, y: 0.9002539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eadd38d591166d0b0800000000000000
+      internalID: -5704265116447154770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_bow
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 54
+        width: 168
+        height: 351
+      alignment: 9
+      pivot: {x: 0.102622986, y: 0.4798615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9b3823c3c4d3fe0800000000000000
+      internalID: -1207725303636182589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_necklace
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 128
+        width: 53
+        height: 135
+      alignment: 9
+      pivot: {x: 0.08215404, y: 0.9605799}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01d3390200cd3aa0800000000000000
+      internalID: -6179571998705594101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_necklace
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 134
+        width: 28
+        height: 119
+      alignment: 9
+      pivot: {x: 0.61613137, y: 0.039030828}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4fdd97efcd4bdc0800000000000000
+      internalID: -3624028814602013523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_bellybutton
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 238
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518bc34cc3c443610800000000000000
+      internalID: 1599987591497431061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_arrow
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 82
+        width: 70
+        height: 235
+      alignment: 9
+      pivot: {x: 0.5530648, y: 0.13645321}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e0dc36f3c526350800000000000000
+      internalID: 6008466280192740898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_tooth
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 80
+        width: 47
+        height: 66
+      alignment: 9
+      pivot: {x: 0.28276062, y: 0.8213015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514a37071f5330e60800000000000000
+      internalID: 7927239080192222229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_leg
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 116
+        width: 40
+        height: 72
+      alignment: 9
+      pivot: {x: 0.50985414, y: 0.91788185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b901dca07c1bd5b20800000000000000
+      internalID: 3124849184902811803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_leg
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 112
+        width: 40
+        height: 72
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2131a4c38074450800000000000000
+      internalID: 6072831677566227185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_L_foot
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 45
+        width: 53
+        height: 28
+      alignment: 9
+      pivot: {x: 0.22366275, y: 0.74285126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d926efc91237ee0800000000000000
+      internalID: -1264630112194486968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_R_foot
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 54
+        width: 51
+        height: 27
+      alignment: 9
+      pivot: {x: 0.2025703, y: 0.71310085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a2d73813fee3820800000000000000
+      internalID: 2900018206011632286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      goblin_L_brow: 263966044083036845
+      goblin_L_ear: -4841993946419120697
+      goblin_L_eye: 5793810251443409644
+      goblin_L_foot: -1264630112194486968
+      goblin_L_hand: 7853868961459747356
+      goblin_L_leg: 3124849184902811803
+      goblin_L_lowerarm: -9030000689824420819
+      goblin_L_necklace: -6179571998705594101
+      goblin_L_upperarm: -5704265116447154770
+      goblin_R_brow: -2752005325231082720
+      goblin_R_ear: -7949635146168662493
+      goblin_R_eye: -275557997232987735
+      goblin_R_foot: 2900018206011632286
+      goblin_R_hand: 9101701988701636292
+      goblin_R_leg: 6072831677566227185
+      goblin_R_lowerarm: 197974100643609268
+      goblin_R_necklace: -3624028814602013523
+      goblin_R_upperarm: 723536229363274407
+      goblin_arrow: 6008466280192740898
+      goblin_bellybutton: 1599987591497431061
+      goblin_body: -28782830129182446
+      goblin_bow: -1207725303636182589
+      goblin_head: 6828462604772625837
+      goblin_tooth: 7927239080192222229
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

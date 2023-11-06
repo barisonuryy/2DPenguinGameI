@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class TrexAttack : MonoBehaviour
 {
-    private bool isJump, isPatrol;
+    Animator anim;
+    private bool isJump,isPatrol;
     private float cdJump;
-    bool isDangerous;
     Rigidbody2D rb;
     [Header("Time")]
     [SerializeField] float jumpCoolDown;
@@ -37,8 +37,7 @@ public class TrexAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         cdJump = 0;
     }
@@ -88,9 +87,12 @@ public class TrexAttack : MonoBehaviour
         float distanceFromPlayer = playerT.position.x - transform.position.x;
         if (isGrounded)
         {
+            isJump = true;
             rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+
         }
         else isJump = false;
+       
     }
     private void OnDrawGizmos()
     {
@@ -107,7 +109,7 @@ public class TrexAttack : MonoBehaviour
         
         if (!(checkingGround || checkingWall))
         {
-          
+            isPatrol = false;
             if (!facingRight)
             {
                 Flip();
@@ -117,7 +119,7 @@ public class TrexAttack : MonoBehaviour
             }
             
         }
-       
+        isPatrol=true;
         rb.velocity = new Vector2(moveSpeed * moveDirection, rb.velocity.y);
     }
     void Flip()
@@ -153,6 +155,11 @@ public class TrexAttack : MonoBehaviour
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
+    }
+    private void OnAnimatorMove()
+    {
+        anim.SetBool("iJump", isJump);
+        anim.SetBool("iPatrol", isPatrol);
     }
 
 
