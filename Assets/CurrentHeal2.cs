@@ -9,11 +9,11 @@ public class CurrentHeal2 : MonoBehaviour
     public Image image;
     private Slider slider;
 
-    bool decrease;
+    
     void Start()
     {
 
-        decrease = false;
+       
         slider = GetComponent<Slider>();
     }
 

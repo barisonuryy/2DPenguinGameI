@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrexAttack : MonoBehaviour
 {
-  
+    private bool isJump, isPatrol;
     private float cdJump;
     bool isDangerous;
     Rigidbody2D rb;
@@ -12,8 +13,8 @@ public class TrexAttack : MonoBehaviour
     [SerializeField] float jumpCoolDown;
     [Header("For Petrolling")]
     [SerializeField] float moveSpeed;
-    public float moveDirection = 1;
-    private bool facingRight = true;
+    public float moveDirection = -1;
+    private bool facingRight = false;
     [SerializeField] Transform groundCheckPoint;
     [SerializeField] Transform wallCheckPoint;
     [SerializeField] float circleRadius;
@@ -29,40 +30,57 @@ public class TrexAttack : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     private bool isGrounded;
 
+    [Header("ForSeeingPlayer")]
+    [SerializeField] Vector2 lineofSite;
+    [SerializeField] LayerMask player;
+    private bool canSeePlayer;
     // Start is called before the first frame update
     void Start()
     {
-        cdJump = 0;
+        
+        
         rb = GetComponent<Rigidbody2D>();
-
+        cdJump = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        isDangerous = gameObject.GetComponentInChildren<dangerousWarning>().isDangerous && cdJump < Time.time;
-
-
+    
+       
+     
 
 
     }
     private void FixedUpdate()
     {
+  
         checkingGround = Physics2D.OverlapCircle(groundCheckPoint.position, circleRadius, groundLayer);
         checkingWall = Physics2D.OverlapCircle(wallCheckPoint.position, circleRadius, groundLayer);
         isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0, groundLayer);
-        // Patrolling();
-        Debug.Log("Velocity deger::" + rb.velocity);
+        canSeePlayer = Physics2D.OverlapBox(transform.position, lineofSite, 0, player);
 
-        FlipTowardsPlayer();
-        if (isDangerous)
+        
+       
+     
+        if (!canSeePlayer&&isGrounded)
         {
-            cdJump = Time.time + jumpCoolDown;
-            JumpAttack();
-            
+            Patrolling();
 
         }
-        //else isJumped=false;
+       else if(canSeePlayer)
+        {
+            FlipTowardsPlayer();
+            JumpAttack();
+        }
+            
+
+
+
+
+
+
+
 
     }
     void JumpAttack()
@@ -72,6 +90,7 @@ public class TrexAttack : MonoBehaviour
         {
             rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
         }
+        else isJump = false;
     }
     private void OnDrawGizmos()
     {
@@ -80,18 +99,25 @@ public class TrexAttack : MonoBehaviour
         Gizmos.DrawWireSphere(wallCheckPoint.transform.position, circleRadius);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(groundCheck.transform.position, boxSize);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(transform.position, lineofSite);
     }
     void Patrolling()
     {
-        if (!checkingGround || checkingWall)
+        
+        if (!(checkingGround || checkingWall))
         {
-            if (facingRight)
+          
+            if (!facingRight)
             {
                 Flip();
             }
-            else if (!facingRight)
+            else if(facingRight) {
                 Flip();
+            }
+            
         }
+       
         rb.velocity = new Vector2(moveSpeed * moveDirection, rb.velocity.y);
     }
     void Flip()
@@ -103,13 +129,29 @@ public class TrexAttack : MonoBehaviour
     void FlipTowardsPlayer()
     {
         float playerPosition = playerT.position.x - transform.position.x;
-        if (playerPosition < 0 && facingRight)
+            if (playerPosition < 0 && facingRight)
+            {
+                Flip();
+            }
+            else if (playerPosition > 0 && !facingRight)
+            {
+                Flip();
+            }
+        
+     
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
         {
-            Flip();
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
-        else if (playerPosition > 0 && !facingRight)
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
         {
-            Flip();
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 

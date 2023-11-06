@@ -15,7 +15,7 @@ public class bossHealthSystem : MonoBehaviour
     Animator anim;
     private float vectorPlayer;
     private AnimationClip _animationClip;
-    private bool canAttack;
+
     private bool isAttacking;
     public float checkCoolDown ;
     public float dirPlayer;
@@ -98,7 +98,7 @@ public class bossHealthSystem : MonoBehaviour
             yield return new WaitForSeconds(1f);
             isVulnerable = false;
             Debug.Log("DELIRME VAKT�");
-            canAttack = true;
+          
 
         }
      

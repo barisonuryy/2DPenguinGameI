@@ -28,13 +28,13 @@ public class LevelManage : MonoBehaviour
     public GameObject lightBolt,machineGun,boss;
     public bool isFalled;
     bool cCreatable;
-    bool isFinalize;
+  
     float bossHealth;
     public float value;
 
     void Start()
     {
-        isFinalize = true;
+     
         create = true;
        //Debug.unityLogger.logEnabled = false;
 
@@ -76,15 +76,7 @@ public class LevelManage : MonoBehaviour
         cCreatable = lightBolt.GetComponent<lighBolt>().canCreatable;
         if(boss!=null)
         bossHealth= boss.GetComponent<bossHealthSystem>().bossHealth;
-       /* if (isFinalize && (bossHealth <= 50))
-        {
-            isFinalize = false;
-            Debug.Log("FÝNALÝZE:" + isFinalize);
-            lightBolts[0]=Instantiate(lightBolt,new Vector3(lightBolt.transform.position.x+Random.Range(1,1.5f),lightBolt.transform.position.y,0),Quaternion.identity);
-            lightBolts[1] = Instantiate(lightBolt, new Vector3(lightBolt.transform.position.x - Random.Range(1, 1.5f), lightBolt.transform.position.y, 0), Quaternion.identity);
-            
-            cCreatable = false;
-        }*/
+ 
       
      
     }

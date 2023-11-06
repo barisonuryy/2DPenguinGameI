@@ -17,10 +17,11 @@ public class tRexDamageEnemy : MonoBehaviour
     void Update()
     {
 
-        dir = gameObject.GetComponentInParent<TrexAttack>().moveDirection;
+        
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        dir = gameObject.GetComponentInParent<TrexAttack>().moveDirection;
         if (collision.CompareTag("Player"))
         {
 

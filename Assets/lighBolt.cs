@@ -10,7 +10,7 @@ public class lighBolt : MonoBehaviour
     // Start is called before the first frame update
     Vector3 decreaseVal, increaseVal;
     public SpriteRenderer rend, playerRend;
-    private float cooldownBolt;
+    
     public float expAreaX, expAreaY;
     private bool isInArea, isInAreaP;
     private float healthBoss;
@@ -20,7 +20,7 @@ public class lighBolt : MonoBehaviour
     Color c;
     void Start()
     {
-        cooldownBolt = 0;
+        
         isCompleted = true;
       
 
