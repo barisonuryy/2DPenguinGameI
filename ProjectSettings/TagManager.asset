@@ -16,6 +16,7 @@ TagManager:
   - HealthBar
   - Boshelt
   - LightBoltT
+  - Obstacle1
   layers:
   - Default
   - TransparentFX

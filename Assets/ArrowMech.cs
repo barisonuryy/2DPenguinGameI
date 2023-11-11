@@ -15,6 +15,7 @@ public class ArrowMech : MonoBehaviour
     [SerializeField] GameObject playerPrefab;
     private void Awake()
     {
+
         if (playerPrefab != null)
         {
             Vector3 toTarget = player.position - transform.position;
@@ -25,16 +26,17 @@ public class ArrowMech : MonoBehaviour
     }
     void Start()
     {
-   
-        
+
+
         rb = GetComponent<Rigidbody2D>();
         moveDirection=(player.position-transform.position).normalized*moveSpeed;
-        float yPower=player.position.y-transform.position.y-1.38f;
+        float yPower=player.position.y-transform.position.y-0.76f;
+        float xPower = transform.position.x -player.position.x ;
         yPower = Mathf.Abs(yPower)*0.5f;
         Debug.Log("Gücün değeri:::" + yPower);
-        rb.velocity = new Vector2(moveDirection.x*4,moveDirection.y*(0.75f+yPower));
+        rb.velocity = new Vector2(moveDirection.x*(xPower*0.25f),moveDirection.y*(2.5f+yPower*0.5f));
         if (gameObject.name != "arrow rot") 
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
         
     }
     private void FixedUpdate()
