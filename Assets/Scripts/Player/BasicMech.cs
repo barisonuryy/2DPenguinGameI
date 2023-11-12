@@ -96,7 +96,7 @@ public class BasicMech : MonoBehaviour
                     string valueEnemy = enemy.gameObject.name;
                     if (enemy.gameObject.CompareTag("CatEnemy"))
                     {
-                        Destroy(enemy, 0.1f);
+                        Destroy(enemy, 0.05f);
                         //enemy.GetComponent<EnemyDeath>().TakeDamage(true);
                     }
                     else if (enemy.gameObject.name == "partBoss")

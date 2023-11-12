@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    [SerializeField] GameObject blood;
     public Finish p;
     public float speed;
       public float health = 100;
@@ -37,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
             
           
         }
+      
 
           PlayerPrefs.SetInt("genHeal", PlayerPrefs.GetInt("generalHealth"));
         //PlayerPrefs.SetInt("genHeal", generalHealth);
@@ -117,12 +118,26 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("CatEnemy"))
         {
             health -= 0.25f;
+            TakeDamageP(true);
+            blood.SetActive(true);
+            blood.GetComponent<Animator>().SetBool("isBleed", takeDamaged);
+            blood.transform.position = transform.GetChild(3).transform.position;
+
         }
     }
     public void TakeDamageP(bool isPunched)
     {
         takeDamaged = isPunched;
     }
-    
+    private void OnAnimatorMove()
+    {
+       
+       
+        
+    }
+
+
+
+
 
 }

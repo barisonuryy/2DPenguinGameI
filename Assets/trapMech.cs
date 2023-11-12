@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class trapMech : MonoBehaviour
 {
+    [SerializeField] GameObject areaControl;
     public float rotateSpeed;
+    bool isPlayerIn;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isPlayerIn = false;   
     }
 
     // Update is called once per frame
@@ -19,15 +21,22 @@ public class trapMech : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.Rotate(Vector3.forward*rotateSpeed*Time.deltaTime);
-        float rot = transform.eulerAngles.z;
+        isPlayerIn=areaControl.GetComponent<startMech>().isInArea;
+      
 
         Debug.Log("TrapRotateDegeri:::" + transform.eulerAngles.z);
-        if (!((rot<= 90&&rot>=0)||(rot>=270&&rot<=360)))
+        if (isPlayerIn)
         {
-            
-            rotateSpeed = -rotateSpeed;
+            transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);
+            float rot = transform.eulerAngles.z;
+            if (!((rot <= 90 && rot >= 0) || (rot >= 270 && rot <= 360)))
+            {
+
+                rotateSpeed = -rotateSpeed;
+            }
         }
       
+      
     }
+  
 }

@@ -27,10 +27,10 @@ public class enemyMovement : MonoBehaviour
        
 
     }
-    private void OnAnimatorMove()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+    }
 
-    }
- 
-    }
+}
 

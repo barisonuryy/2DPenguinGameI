@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonEffect : MonoBehaviour
 {
     [SerializeField] float slideSpeed;
+    [SerializeField] GameObject ladder;
     [SerializeField] float rotateSpeed;
     public bool isShiftable;
     // Start is called before the first frame update
@@ -51,6 +52,7 @@ public class ButtonEffect : MonoBehaviour
         {
             Debug.Log("BUTTONA BASILDI");
             isShiftable = true;
+            ladder.SetActive(true);
         }
     }
 

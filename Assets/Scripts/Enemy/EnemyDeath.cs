@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
     
 {
+    [SerializeField] GameObject smoke;
     GameObject enemy;
     public float deathTime = 0;
     bool damage = false;
@@ -34,6 +35,8 @@ public class EnemyDeath : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
+            smoke.SetActive(true);
+            smoke.transform.position=transform.GetChild(0).position;
             Destroy(enemy);
         }
     }

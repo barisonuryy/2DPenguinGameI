@@ -6,12 +6,14 @@ public class takeKey : MonoBehaviour
 {
     bool isMove;
     public bool haveKey;
-   
+    [SerializeField] GameObject keyUI;
     Animation anim;
     // Start is called before the first frame update
     void Start()
     {
         haveKey = false;
+        keyUI.SetActive
+            (false);
         anim = GetComponent<Animation>();
     }
 
@@ -36,6 +38,7 @@ public class takeKey : MonoBehaviour
     }
     private void OnDestroy()
     {
+        keyUI.SetActive(true);
         haveKey=true;
     }
 

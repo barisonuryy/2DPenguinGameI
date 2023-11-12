@@ -11,7 +11,7 @@ public class effectofObject : MonoBehaviour
     public bool isLadder;
     float direction;
     Rigidbody2D rb;
-    ladderControl check;
+   [SerializeField] GameObject check;
     void Start()
     {
       rb= GetComponent<Rigidbody2D>(); 
@@ -23,7 +23,7 @@ public class effectofObject : MonoBehaviour
         direction = Input.GetAxis("Vertical");
 
 
-        isLadder = false;
+        isLadder = check.GetComponent<ladderControl>().isClimable;
         if (isLadder)
         {
             if(direction > 0)
