@@ -23,8 +23,11 @@ public class startBossFight : MonoBehaviour
         {
             music2.Stop();
             isPlaying = true;
-            boss.SetActive(true);
-            picture.SetActive(true);
+            if(boss!=null&&picture!=null) {
+                boss.SetActive(true);
+                picture.SetActive(true);
+            }
+         
             if (!music.isPlaying)
                 music.Play();
             
@@ -55,6 +58,7 @@ public class startBossFight : MonoBehaviour
             {
                 teleport.SetActive(false);
                 startBossF = false;
+                if(picture!=null)
                 picture.SetActive(false);
             }
         }

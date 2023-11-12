@@ -6,7 +6,7 @@ using UnityEngine;
 public class generalHealth : MonoBehaviour
 {
     bool dead;
-    public GameObject player,healthBar,backGroundMusic;
+    public GameObject player,healthBar,backGroundMusic,levelManage;
     bool isInArea;
     public Vector3 lScale;
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class generalHealth : MonoBehaviour
     void Update()
     {
         LevelManage d = GameObject.Find("LevelManager").GetComponent<LevelManage>();
+        if(levelManage.transform.GetChild(2).gameObject.activeInHierarchy)
         isInArea=d.gameObject.GetComponentInChildren<startBossFight>().startBossF;
         if(isInArea)
         {

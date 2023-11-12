@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
@@ -18,8 +19,9 @@ public class CameraController : MonoBehaviour
     }
     private void Update()
     {
+        if(fightArea != null)
         isInArea = fightArea.GetComponent<startBossFight>().startBossF;
-       if( isInArea )
+       if( isInArea&&SceneManager.GetActiveScene().buildIndex==2 )
         {
             transform.position = new Vector3(58.48f, -2.27f, -10f);
             gameObject.GetComponent<Camera>().orthographicSize = 2.8f;

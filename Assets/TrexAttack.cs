@@ -7,7 +7,6 @@ public class TrexAttack : MonoBehaviour
 {
     Animator anim;
     private bool isJump,isPatrol;
-    private float cdJump;
     Rigidbody2D rb;
     [Header("Time")]
     [SerializeField] float jumpCoolDown;
@@ -39,7 +38,7 @@ public class TrexAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        cdJump = 0;
+       
     }
 
     // Update is called once per frame

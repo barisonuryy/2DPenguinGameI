@@ -159,11 +159,13 @@ public class BasicMech : MonoBehaviour
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
         move = false;
+        if(boss!=null)
         boss.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale=originalGravity;
         isDashing = false;
+        if(boss!=null)
         boss.GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(dashingCoolDown);
         canDash = true;

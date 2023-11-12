@@ -120,7 +120,6 @@ public class PlayerHealth : MonoBehaviour
             health -= 0.25f;
             TakeDamageP(true);
             blood.SetActive(true);
-            blood.GetComponent<Animator>().SetBool("isBleed", takeDamaged);
             blood.transform.position = transform.GetChild(3).transform.position;
 
         }

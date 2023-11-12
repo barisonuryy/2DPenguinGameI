@@ -6,22 +6,20 @@ using UnityEngine.UIElements;
 public class showKey : MonoBehaviour
 {
 
-    private Image image;
     // Start is called before the first frame update
     void Start()
     {
-        image = GetComponent<Image>();  
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
-       
+        
    
         
     }
-    private void OnEnable()
+  /*  private void OnEnable()
     {
         StartCoroutine(FadeIn());
     }
@@ -48,5 +46,5 @@ public class showKey : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
-    }
+    }*/
 }

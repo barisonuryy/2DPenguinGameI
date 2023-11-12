@@ -23,7 +23,7 @@ public class takeKey : MonoBehaviour
         if (collision.CompareTag("Player")&&Input.GetKey(KeyCode.E))
         {
             isMove = true;
-            
+            haveKey = true;
             anim.Play();
         }
         
@@ -39,7 +39,7 @@ public class takeKey : MonoBehaviour
     private void OnDestroy()
     {
         keyUI.SetActive(true);
-        haveKey=true;
+        
     }
 
 

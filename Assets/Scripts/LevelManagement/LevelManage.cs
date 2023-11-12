@@ -28,7 +28,7 @@ public class LevelManage : MonoBehaviour
     public GameObject lightBolt,machineGun,boss;
     public bool isFalled;
     bool cCreatable;
-  
+    bool isIn;
     float bossHealth;
     public float value;
 
@@ -44,9 +44,13 @@ public class LevelManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        reloadedAmmos = machineGun.GetComponent<weaponScript>().reloadedAmmo;
-        ammoCount = machineGun.GetComponent<weaponScript>().ammoCounter;
-  
+        if (machineGun!=null)
+        {
+            reloadedAmmos = machineGun.GetComponent<weaponScript>().reloadedAmmo;
+            ammoCount = machineGun.GetComponent<weaponScript>().ammoCounter;
+
+        }
+
         if (reloadedAmmos)
         {
   
@@ -142,7 +146,8 @@ public class LevelManage : MonoBehaviour
     public void createBulletUI()
     {
         float distance,range;
-        bool isIn = GetComponentInChildren<startBossFight>().startBossF;
+        if(transform.GetChild(2).gameObject.activeInHierarchy)
+        isIn = GetComponentInChildren<startBossFight>().startBossF;
         if (isIn)
         {
             range = 3.25f;

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class makeClone : MonoBehaviour
 {
+    float bossHealth;
     public GameObject lightBollt, boss;
     GameObject[] lightBolts;
     bool cCreatable;
@@ -17,8 +18,12 @@ public class makeClone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float bossHealth = boss.GetComponent<bossHealthSystem>().bossHealth;
-        cCreatable = lightBollt.GetComponent<lighBolt>().canCreatable;
+        if(boss != null && lightBollt != null)
+        {
+            bossHealth = boss.GetComponent<bossHealthSystem>().bossHealth;
+            cCreatable = lightBollt.GetComponent<lighBolt>().canCreatable;
+        } 
+   
         if (cCreatable && (bossHealth <= 50))
         {
             GameObject a=Instantiate(lightBollt, new Vector3(lightBollt.transform.position.x + Random.Range(1.5f, 2.5f), lightBollt.transform.position.y, 0), Quaternion.identity);
