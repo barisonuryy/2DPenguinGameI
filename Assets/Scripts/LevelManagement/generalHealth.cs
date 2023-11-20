@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class generalHealth : MonoBehaviour
 {
@@ -19,8 +20,12 @@ public class generalHealth : MonoBehaviour
     void Update()
     {
         LevelManage d = GameObject.Find("LevelManager").GetComponent<LevelManage>();
-        if(levelManage.transform.GetChild(2).gameObject.activeInHierarchy)
-        isInArea=d.gameObject.GetComponentInChildren<startBossFight>().startBossF;
+        if(SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            if (levelManage.transform.GetChild(2).gameObject.activeInHierarchy)
+                isInArea = d.gameObject.GetComponentInChildren<startBossFight>().startBossF;
+        }
+      
         if(isInArea)
         {
             gameObject.transform.localScale = lScale;

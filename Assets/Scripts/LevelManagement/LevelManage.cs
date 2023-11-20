@@ -37,7 +37,7 @@ public class LevelManage : MonoBehaviour
      
         create = true;
        //Debug.unityLogger.logEnabled = false;
-
+       if(SceneManager.GetActiveScene().buildIndex != 1)
         ammoCount =machineGun.GetComponent<weaponScript>().ammoCounter;
     }
 
@@ -131,7 +131,7 @@ public class LevelManage : MonoBehaviour
     }
     public void restartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
     public void exitGame()
@@ -146,8 +146,12 @@ public class LevelManage : MonoBehaviour
     public void createBulletUI()
     {
         float distance,range;
-        if(transform.GetChild(2).gameObject.activeInHierarchy)
-        isIn = GetComponentInChildren<startBossFight>().startBossF;
+        if(SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            if (transform.GetChild(2).gameObject.activeInHierarchy)
+                isIn = GetComponentInChildren<startBossFight>().startBossF;
+        }
+    
         if (isIn)
         {
             range = 3.25f;
@@ -160,13 +164,17 @@ public class LevelManage : MonoBehaviour
             distance = 4.35f;
             range = 1.35f;
         }
-        for (int i = bulletParent.transform.childCount-1; i < ammoCount; i++)
+        if(SceneManager.GetActiveScene().buildIndex != 1)
         {
-    
-            bulletCopyUI = Instantiate(bulletUIObj, new Vector3(bulletUIObj.transform.position.x + distance+ ((float)i / range), bulletUIObj.transform.position.y, bulletUIObj.transform.position.z), Quaternion.identity);
-            
-            bulletCopyUI.transform.SetParent(bulletUIObj.transform.parent);
-            bulletCopyUI.transform.localScale = new Vector3(0.796875f, 0.778125f, 1);
+            for (int i = bulletParent.transform.childCount - 1; i < ammoCount; i++)
+            {
+
+                bulletCopyUI = Instantiate(bulletUIObj, new Vector3(bulletUIObj.transform.position.x + distance + ((float)i / range), bulletUIObj.transform.position.y, bulletUIObj.transform.position.z), Quaternion.identity);
+
+                bulletCopyUI.transform.SetParent(bulletUIObj.transform.parent);
+                bulletCopyUI.transform.localScale = new Vector3(0.796875f, 0.778125f, 1);
+            }
         }
+      
     }
 }

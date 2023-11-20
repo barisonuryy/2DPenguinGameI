@@ -6828,6 +6828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08c307482208ed4a9ebb12e882bd11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 0}
   p: {fileID: 1563529957}
   speed: 7
   health: 20
@@ -7004,7 +7005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172240731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.95, y: -0.31, z: 0}
+  m_LocalPosition: {x: 58.49, y: -0.31, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7028,6 +7029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpeed: 3
   isLadder: 0
+  check: {fileID: 0}
+  horizantalSpeed: 0
 --- !u!114 &1172240744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7176,6 +7179,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -5}
   followSpeed: 0.125
   fightArea: {fileID: 1490580427}
+  buttonArea: {fileID: 0}
   vectorArea: {x: 0, y: 0, z: 0}
 --- !u!1 &1179496769
 GameObject:
@@ -8946,6 +8950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e98b5301ce3ed542bef92aad13da161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 0}
   deathTime: 0.2
   enemyDeathScore: {fileID: 485788459}
 --- !u!61 &1488390454
@@ -10509,6 +10514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e98b5301ce3ed542bef92aad13da161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 0}
   deathTime: 0.2
   enemyDeathScore: {fileID: 485788459}
 --- !u!61 &1798826043
@@ -11485,6 +11491,7 @@ MonoBehaviour:
   player: {fileID: 1172240731}
   healthBar: {fileID: 1024315254}
   backGroundMusic: {fileID: 513619707}
+  levelManage: {fileID: 0}
   lScale: {x: 0.5, y: 0.5, z: 1}
 --- !u!1 &1901400724
 GameObject:

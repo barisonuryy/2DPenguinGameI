@@ -30,6 +30,7 @@ public class BasicMech : MonoBehaviour
     public float dashingTime = 0.2f;
     private float dashingCoolDown = 3f;
     public BoxCollider2D bc2d;
+  
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private LayerMask platformLayerMask1;
     [SerializeField] private LayerMask platformLayerMask2;
@@ -134,6 +135,7 @@ public class BasicMech : MonoBehaviour
             jump = true;
             directionY = Input.GetAxis("Vertical");
             rb.velocity = new Vector2(rb.velocity.x, verticalS);
+           
         }
         else jump = false;
            

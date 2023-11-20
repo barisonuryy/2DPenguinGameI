@@ -17,6 +17,7 @@ TagManager:
   - Boshelt
   - LightBoltT
   - Obstacle1
+  - Rope
   layers:
   - Default
   - TransparentFX
