@@ -18,6 +18,7 @@ TagManager:
   - LightBoltT
   - Obstacle1
   - Rope
+  - Archer
   layers:
   - Default
   - TransparentFX

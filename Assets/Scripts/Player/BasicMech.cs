@@ -30,13 +30,15 @@ public class BasicMech : MonoBehaviour
     public float dashingTime = 0.2f;
     private float dashingCoolDown = 3f;
     public BoxCollider2D bc2d;
-  
+    [SerializeField] float velocityBooster;
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private LayerMask platformLayerMask1;
     [SerializeField] private LayerMask platformLayerMask2;
     [SerializeField] private TrailRenderer tr;
     public float glidingspeed;
     GameObject boss;
+    bool canUseBoost;
+    float tempVBooster;
 
     private void Awake()
     {
@@ -46,7 +48,7 @@ public class BasicMech : MonoBehaviour
     }
     void Start()
     {
-
+        tempVBooster = velocityBooster;
         animator =GetComponent<Animator>();
        
     }
@@ -130,7 +132,7 @@ public class BasicMech : MonoBehaviour
     }
     void Jump(bool isGrounded)
     {
-        if (isGrounded && Input.GetButtonUp("Vertical"))
+        if (isGrounded && Input.GetButton("Vertical"))
         {
             jump = true;
             directionY = Input.GetAxis("Vertical");
@@ -161,12 +163,14 @@ public class BasicMech : MonoBehaviour
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
         move = false;
+        jump = false;
         if(boss!=null)
         boss.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale=originalGravity;
         isDashing = false;
+        jump = true;
         if(boss!=null)
         boss.GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(dashingCoolDown);
@@ -187,7 +191,16 @@ public class BasicMech : MonoBehaviour
         {
             return;
         }
-        rb.velocity = new Vector2(directionX * horizontalS, rb.velocity.y);
+        canUseBoost = GetComponent<effectofObject>().inRope;
+        if (canUseBoost)
+        {
+            velocityBooster = tempVBooster;
+        }
+        else
+        {
+            velocityBooster = 1;
+        }
+        rb.velocity = new Vector2(directionX * horizontalS*velocityBooster, rb.velocity.y);
         
     }
     private void OnAnimatorMove()

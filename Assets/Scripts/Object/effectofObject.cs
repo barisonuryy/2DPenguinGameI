@@ -13,7 +13,7 @@ public class effectofObject : MonoBehaviour
     public float verticalSpeed;
     public bool isLadder;
     float directionY,directionX;
-    bool inRope;
+  public  bool inRope;
     Collider2D cdRope;
     Rigidbody2D rb;
     BoxCollider2D bc2d;
@@ -40,7 +40,7 @@ public class effectofObject : MonoBehaviour
     {
         directionY = Input.GetAxis("Vertical");
         directionX = Input.GetAxis("Horizontal");
-         isLadder = check.GetComponent<ladderControl>().isClimable;
+        isLadder = check.GetComponent<ladderControl>().isClimable;
         if (isLadder)
         {
             if (directionY > 0)
@@ -68,10 +68,9 @@ public class effectofObject : MonoBehaviour
 
       if(inRope)
         {
+            
 
-            //transform.Rotate(new Vector3(0, 0, (transform.rotation.z - ropeT.rotation.z)*Time.deltaTime));
-           
-            rope.AddRelativeForce(new Vector2(horizantalSpeedR*directionX* Time.deltaTime, 0));
+            //rope.AddRelativeForce(new Vector2(horizantalSpeedR*directionX* Time.deltaTime, 0));
             
 
             if (Input.GetKey(KeyCode.Space)&&Input.GetAxis("Horizontal")!=0){
@@ -95,9 +94,7 @@ public class effectofObject : MonoBehaviour
             ropeT = collision.transform;
             fj.connectedBody = rope;
             cdRope=collision.collider; 
-           // bc2d.isTrigger = true;
-           // cc2d.isTrigger = true;
-           // transform.position = rope.position;
+          
            
          
 

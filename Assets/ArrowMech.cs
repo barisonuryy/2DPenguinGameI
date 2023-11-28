@@ -8,54 +8,97 @@ public class ArrowMech : MonoBehaviour
     Rigidbody2D rb;
     float moveSpeed = 7f;
     Vector2 moveDirection;
-    
+
+    [SerializeField] float Speed;
+    float xPosPlayer,nextX,baseY;
+    float xPosBow;
+    float dis;
+    float height;
     [SerializeField] float rotSpeed;
     [SerializeField] float rotModifier;
     [SerializeField] Transform player;
     [SerializeField] GameObject playerPrefab;
+    [SerializeField] Transform bowT;
+    Vector3 downPos;
+    bool isHit;
     private void Awake()
     {
 
-        if (playerPrefab != null)
-        {
-            Vector3 toTarget = player.position - transform.position;
-            float angle = Mathf.Atan2(toTarget.y, toTarget.x) * Mathf.Rad2Deg * rotModifier;
-            Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * rotSpeed);
-        }
     }
     void Start()
     {
 
 
-        rb = GetComponent<Rigidbody2D>();
-        moveDirection=(player.position-transform.position).normalized*moveSpeed;
-        float yPower=player.position.y-transform.position.y-0.76f;
-        float xPower = transform.position.x -player.position.x ;
-        yPower = Mathf.Abs(yPower)*0.5f;
-        Debug.Log("Gücün değeri:::" + yPower);
-        rb.velocity = new Vector2(moveDirection.x*(xPower*0.25f),moveDirection.y*(2.5f+yPower*0.5f));
-        if (gameObject.name != "arrow rot") 
-        Destroy(gameObject, 1f);
-        
+        /* rb = GetComponent<Rigidbody2D>();
+         moveDirection=(player.position-bowT.position).normalized*moveSpeed;
+
+         //rb.AddRelativeForce(new Vector2(xPower * 30, yPower*20 ), ForceMode2D.Force);
+         Debug.Log("moveDirectionDeger:::" + moveDirection);
+         rb.velocity = transform.right*moveDirection*Time.deltaTime*Speed;*/
+
+
+
+        //if (gameObject.name != "arrow rot") 
+        //Destroy(gameObject, 1f);
+        xPosPlayer = player.position.x;
+        xPosBow = bowT.position.x;
+        dis = xPosPlayer - xPosBow;
+
+    }
+    private void Update()
+    {
+        if (gameObject.name != "arrow rot"&&!isHit)
+        {
+         
+            nextX = Mathf.MoveTowards(transform.position.x, xPosPlayer, Speed * Time.deltaTime);
+            baseY = Mathf.Lerp(bowT.transform.position.y, player.position.y, (nextX - xPosBow) / dis);
+            height = 2 * (nextX - xPosBow) * (nextX - xPosPlayer) / (-0.25f * dis * dis);
+            Vector3 movePosition = new Vector3(nextX, baseY + height, transform.position.z);
+            if(transform.position.x-player.transform.position.x > 0)
+            transform.rotation = LookAtTarget(transform.position-movePosition);
+            transform.position = movePosition;
+            if (gameObject.name != "arrow rot")
+            {
+                //Destroy(gameObject,1.5f);
+            }
+        }
+           
     }
     private void FixedUpdate()
     {
       
+    }
+    public static Quaternion LookAtTarget(Vector2 rotation)
+    {
+        return Quaternion.Euler(0,0,Mathf.Atan2(rotation.y,rotation.x)*Mathf.Rad2Deg);
     }
 
     // Update is called once per frame
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (!collision.collider.CompareTag("Player"))
+
+        if (gameObject.name != "arrow rot")
         {
-            hasHit = true;
+            isHit = true;
+            Destroy(gameObject,0.25f);
+        }
 
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
 
-        }*/
+        if (gameObject.name != "arrow rot")
+        {
+            
+        }
 
-
-
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Archer"))
+        {
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+        }
     }
 }
