@@ -21,13 +21,16 @@ public class ArrowMech : MonoBehaviour
     [SerializeField] Transform bowT;
     Vector3 downPos;
     bool isHit;
+    bool isFoundPlayer;
+    [SerializeField] float fallSpeed;
+
     private void Awake()
     {
 
     }
     void Start()
     {
-
+        isFoundPlayer = true;
 
         /* rb = GetComponent<Rigidbody2D>();
          moveDirection=(player.position-bowT.position).normalized*moveSpeed;
@@ -47,7 +50,7 @@ public class ArrowMech : MonoBehaviour
     }
     private void Update()
     {
-        if (gameObject.name != "arrow rot"&&!isHit)
+        if (gameObject.name != "arrow rot"&&!isHit&&isFoundPlayer)
         {
          
             nextX = Mathf.MoveTowards(transform.position.x, xPosPlayer, Speed * Time.deltaTime);
@@ -61,6 +64,16 @@ public class ArrowMech : MonoBehaviour
             {
                 //Destroy(gameObject,1.5f);
             }
+            
+        }
+        if (transform.position.y <= player.position.y&& gameObject.name != "arrow rot")
+        {
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            gameObject.GetComponent<Rigidbody2D>().freezeRotation = true;
+
+            isFoundPlayer = false;
+            gameObject.GetComponent<Rigidbody2D>().velocity = (Vector2.left + Vector2.down)*15;
+           
         }
            
     }
@@ -78,10 +91,16 @@ public class ArrowMech : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (gameObject.name != "arrow rot")
+        if (gameObject.name != "arrow rot"&&gameObject.CompareTag("Player"))
         {
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
             isHit = true;
             Destroy(gameObject,0.25f);
+        }
+        if (gameObject.name != "arrow rot" && !gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            Destroy(gameObject, 0.25f);
         }
 
     }

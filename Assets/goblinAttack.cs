@@ -16,7 +16,7 @@ public class goblinAttack : MonoBehaviour
     [SerializeField] Transform bowT;
     [SerializeField] GameObject playerPrefab;
     Animator anim;
-    bool isInRange;
+   public bool isInRange;
 
     private void Start()
     {

@@ -19,6 +19,7 @@ TagManager:
   - Obstacle1
   - Rope
   - Archer
+  - Arrow
   layers:
   - Default
   - TransparentFX
