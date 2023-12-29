@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -124,6 +125,20 @@ public class PlayerHealth : MonoBehaviour
 
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Arrow"))
+        {
+            health -= 1f;
+            TakeDamageP(true);
+            blood.SetActive(true);
+            blood.transform.position = transform.GetChild(3).transform.position;
+            Destroy(other.gameObject);
+
+        }
+    }
+
     public void TakeDamageP(bool isPunched)
     {
         takeDamaged = isPunched;

@@ -4,53 +4,75 @@ using UnityEngine;
 
 public class goblinAttack : MonoBehaviour
 {
-    [SerializeField] GameObject arrow;
-    [SerializeField] float fireRate;
-    [SerializeField] float nextFire;
-    [SerializeField] Transform shotPoint;
-    [SerializeField] Vector2 dangerArea;
-    [SerializeField] LayerMask player;
-    [SerializeField] float rotSpeed;
-    [SerializeField] float rotModifier;
-    [SerializeField] Transform playerT;
-    [SerializeField] Transform bowT;
-    [SerializeField] GameObject playerPrefab;
-    Animator anim;
-   public bool isInRange;
+   public GameObject Arrow;
+    public float launchForce;
+    public Transform shotPoint;
+    public GameObject point;
+    GameObject[] points;
+    public int numberofPoints;
+    public float spaceBetweenPoints;
+    Vector2 direction;
+    private float dirPlayer;
+    private float constantDir;
+    Vector2 mousePosition;
+    Vector2 direcPosition;
+    private float coolDownWeap;
+    public AnimationClip animationClip;
+    float weapTime;
+    [SerializeField] private Transform playerPos;
 
-    private void Start()
+    void Start()
     {
-        anim=transform.root.GetComponent<Animator>();
-        //fireRate = 1f;
-        nextFire=Time.time;
-    }
-    private void Update()
-    {
-       
-        isInRange = Physics2D.OverlapBox(gameObject.transform.root.position, dangerArea, 0, player);
-        if(isInRange )
-        CheckTimeToFire();
-    }
-    void CheckTimeToFire()
-    {
-        if (Time.time>nextFire)
+        weapTime = 0;
+        points = new GameObject[numberofPoints];
+        for (int i = 0; i < numberofPoints; i++)
         {
+            points[i] = Instantiate(point, transform.position, Quaternion.identity);
+        }
 
-         Instantiate(arrow, bowT.position, Quaternion.identity);
-         nextFire = Time.time + fireRate;
-            
-            
+        coolDownWeap = animationClip.length;
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        dirPlayer = transform.root.localScale.x;
+       
+        Vector2 gunPosition = transform.position;
+        direcPosition = gunPosition - new Vector2(playerPos.position.x, playerPos.position.y);
+        direction = Mathf.Sign(dirPlayer)*Mathf.Ceil(Mathf.Abs(dirPlayer))*direcPosition;
+        transform.right = direction;
+       
+
+        if (Time.time > weapTime)
+        {
+ 
+            weapTime = Time.time + coolDownWeap;
+            Shoot();
+           
+        }
+
+        for (int i = 0; i < numberofPoints; i++)
+        {
+            points[i].transform.position = pointPosition(i * spaceBetweenPoints);
         }
     }
-    private void OnDrawGizmos()
+    void Shoot()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(gameObject.transform.root.position, dangerArea);
+        GameObject newSB = Instantiate(Arrow, shotPoint.position,shotPoint.rotation);
+        newSB.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+       
+ 
     }
-    private void FixedUpdate()
+    Vector2 pointPosition(float t)
     {
-      
-    }
+        Vector2 position = (Vector2)transform.position + (direction.normalized * launchForce * t) + 0.5f * Physics2D.gravity * (t * t);
+        return position;
 
+    }
+   
 
 }

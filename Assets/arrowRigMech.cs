@@ -49,7 +49,7 @@ public class arrowRigMech : MonoBehaviour
     void Update()
     {
 
-        isInRng = goblin.GetComponent<goblinAttack>().isInRange;
+      
          dirGoblin= goblin.GetComponent<Transform>().localScale.x;
         constantDir = dirGoblin*2;
        
