@@ -82,5 +82,6 @@ public class meleeAttack : MonoBehaviour
     {
         if (PlayerInSight())
             playerHealth.TakeDamage(damage);
+            playerHealth.TakeDamageP(true);
     }
 }

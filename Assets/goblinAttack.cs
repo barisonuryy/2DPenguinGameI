@@ -25,11 +25,7 @@ public class goblinAttack : MonoBehaviour
     void Start()
     {
         weapTime = 0;
-        points = new GameObject[numberofPoints];
-        for (int i = 0; i < numberofPoints; i++)
-        {
-            points[i] = Instantiate(point, transform.position, Quaternion.identity);
-        }
+   
 
         coolDownWeap = animationClip.length;
 
@@ -57,13 +53,7 @@ public class goblinAttack : MonoBehaviour
                 Shoot();
            
             } 
-        
-       
-
-        for (int i = 0; i < numberofPoints; i++)
-        {
-            points[i].transform.position = pointPosition(i * spaceBetweenPoints);
-        }
+            
     }
     void Shoot()
     {
@@ -72,12 +62,7 @@ public class goblinAttack : MonoBehaviour
        
  
     }
-    Vector2 pointPosition(float t)
-    {
-        Vector2 position = (Vector2)transform.position + (direction.normalized * launchForce * t) + 0.5f * Physics2D.gravity * (t * t);
-        return position;
-
-    }
+  
    
 
 }
