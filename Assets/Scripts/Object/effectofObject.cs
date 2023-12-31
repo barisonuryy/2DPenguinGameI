@@ -58,7 +58,7 @@ public class effectofObject : MonoBehaviour
                 rb.gravityScale = 0f;
                 rb.velocity = Vector2.zero;
             }
-            Debug.Log("KOSULLAR UYGULANDI");
+          
 
         }
         else
@@ -74,7 +74,7 @@ public class effectofObject : MonoBehaviour
             
 
             if (Input.GetKey(KeyCode.Space)&&Input.GetAxis("Horizontal")!=0){
-                Debug.Log("İpten zıpladı");
+               
              StartCoroutine(jumpToRope());
 
             }

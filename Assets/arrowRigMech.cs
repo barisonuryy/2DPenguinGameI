@@ -57,7 +57,7 @@ public class arrowRigMech : MonoBehaviour
         direcPosition = new Vector2(playerPosition.position.x-bowTPos.x, (playerPosition.position.y - bowTPos.y)/3);
         direction = direcPosition;
         transform.right = direction;
-        Debug.Log("Direction degerix::" + direction);
+        
   
 
         //transform.localScale = new Vector3(constantDir / 6, constantDir / 6, 1);
@@ -71,7 +71,7 @@ public class arrowRigMech : MonoBehaviour
             {
                 points[i].SetActive(true);
                 isShoot = true;
-                Debug.Log("Noktayıkoydum");
+               
 
 
             }
@@ -94,7 +94,7 @@ public class arrowRigMech : MonoBehaviour
             weapTime = Time.time + coolDownWeap;
             Shoot();
           
-            Debug.Log("talha2x");
+            
          
 
 

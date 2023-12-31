@@ -24,7 +24,7 @@ public class trapMech : MonoBehaviour
         isPlayerIn=areaControl.GetComponent<startMech>().isInArea;
       
 
-        Debug.Log("TrapRotateDegeri:::" + transform.eulerAngles.z);
+     
         if (isPlayerIn)
         {
             transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);

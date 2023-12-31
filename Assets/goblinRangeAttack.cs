@@ -51,7 +51,7 @@ public class goblinRangeAttack : MonoBehaviour
     {
         if (timeToFire <= 0f)
         {
-            Debug.Log("Shoot");
+          
             timeToFire = fireRate;
 
         }

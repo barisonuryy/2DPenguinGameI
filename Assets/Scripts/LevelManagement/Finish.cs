@@ -14,7 +14,7 @@ public class Finish : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("TAMAMLANDI");
+          
            GameObject.Find("Kinder").GetComponent<BasicMech>().enabled= false;
             GameObject.Find("Kinder").GetComponent<Animator>().enabled = false;
             GameObject.Find("Kinder").GetComponent<SFX>().enabled = false;

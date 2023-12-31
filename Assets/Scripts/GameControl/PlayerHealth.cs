@@ -120,8 +120,7 @@ public class PlayerHealth : MonoBehaviour
         {
             health -= 0.25f;
             TakeDamageP(true);
-            blood.SetActive(true);
-            blood.transform.position = transform.GetChild(3).transform.position;
+      
 
         }
     }
@@ -132,8 +131,6 @@ public class PlayerHealth : MonoBehaviour
         {
             health -= 1f;
             TakeDamageP(true);
-            blood.SetActive(true);
-            blood.transform.position = transform.GetChild(3).transform.position;
             Destroy(other.gameObject);
 
         }
@@ -142,6 +139,17 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamageP(bool isPunched)
     {
         takeDamaged = isPunched;
+        if (isPunched)
+        {
+            blood.SetActive(true);
+            blood.transform.position = transform.GetChild(3).transform.position;
+        }
+    }
+
+    public void TakeDamage(int healthP)
+    {
+        health -= healthP;
+        
     }
     private void OnAnimatorMove()
     {

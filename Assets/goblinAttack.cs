@@ -20,6 +20,7 @@ public class goblinAttack : MonoBehaviour
     public AnimationClip animationClip;
     float weapTime;
     [SerializeField] private Transform playerPos;
+    private bool rangeControl;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class goblinAttack : MonoBehaviour
 
         coolDownWeap = animationClip.length;
 
-
+       
     }
 
     // Update is called once per frame
@@ -45,15 +46,19 @@ public class goblinAttack : MonoBehaviour
         direcPosition = gunPosition - new Vector2(playerPos.position.x, playerPos.position.y);
         direction = Mathf.Sign(dirPlayer)*Mathf.Ceil(Mathf.Abs(dirPlayer))*direcPosition;
         transform.right = direction;
-       
 
-        if (Time.time > weapTime)
-        {
+
+        rangeControl = transform.GetComponentInParent<TriggerControlArcher>().isInRange;
+          
+            if (Time.time > weapTime&&rangeControl)
+            {
  
-            weapTime = Time.time + coolDownWeap;
-            Shoot();
+                weapTime = Time.time + coolDownWeap;
+                Shoot();
            
-        }
+            } 
+        
+       
 
         for (int i = 0; i < numberofPoints; i++)
         {

@@ -87,7 +87,6 @@ public class BasicMech : MonoBehaviour
             if (Input.GetButton("Attack")&& Time.time > cooldownAttack)
             {
             cooldownAttack = Time.time + totalDurationA;
-            Debug.Log("Atak Baþarili");
                 attack = true;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0);
                 
@@ -95,7 +94,6 @@ public class BasicMech : MonoBehaviour
                 {
                 if (enemy.gameObject != null)
                 {
-                    Debug.Log(enemy.gameObject.name);
                     string valueEnemy = enemy.gameObject.name;
                     if (enemy.gameObject.CompareTag("CatEnemy"))
                     {

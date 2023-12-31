@@ -50,16 +50,7 @@ public class BossJump: StateMachineBehaviour
                 isAbove = false;
               rb.MovePosition(newPos);
         }
-        /*if (Vector2.Distance(player.position, rb.position) <= 7f)
-        {
-            
-            canExplode = true;
-            //GameObject.FindGameObjectWithTag("Explosion").SetActive(true);
-           // Debug.Log("Boss bombayı patlattı");
-           // GameObject.FindGameObjectWithTag("Explosion").SetActive(true);
-           // GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().health -= 5f;
-            Debug.Log(canExplode+"DÖNEN DEĞER BU");
-        }*/
+       
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -70,7 +61,7 @@ public class BossJump: StateMachineBehaviour
               isPlaying = false;
               //GameObject.Find("expBoss").SetActive(false);
 
-        Debug.Log("Alandan çıkılıyor");
+  
         }
         
     }

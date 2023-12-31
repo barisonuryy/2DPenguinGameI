@@ -10,7 +10,7 @@ public class ladderControl : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isClimable = true;
-            Debug.Log("Merdiven alanýndasiniz");
+        
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

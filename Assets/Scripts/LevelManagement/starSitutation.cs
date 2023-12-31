@@ -35,7 +35,7 @@ public class starSitutation : MonoBehaviour
         
         if (passed)
         {
-            Debug.Log("passed kosulu calisti");
+           
             if (score >= 150&&score<250)
             {
                 index = 0;
@@ -69,7 +69,7 @@ public class starSitutation : MonoBehaviour
         if (dead)
         {
 
-            Debug.Log("dead kosulu calisti");
+            
             index = 3;
              for (int i = 0; i < 3; i++)
              {

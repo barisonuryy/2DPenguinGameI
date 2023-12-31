@@ -17,7 +17,7 @@ public class changeColliderS : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) {
-            Debug.Log("BoxCollide küçültüldü");
+          
              playerCollider.size=new Vector2(0.5F, defaulSize.y);
         }
     }

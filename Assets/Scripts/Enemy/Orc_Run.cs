@@ -25,7 +25,6 @@ public class Orc_Run : StateMachineBehaviour
        Vector2 newPos= Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         if (GameObject.Find("FightArea").GetComponent<startBossFight>().startBossF)
         {
-            Debug.Log("alana girildi");
             rb.MovePosition(newPos);
         }
         if (Vector2.Distance(player.position, rb.position) <= attackRange)

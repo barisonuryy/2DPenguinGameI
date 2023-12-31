@@ -41,13 +41,13 @@ public class currentHeal : MonoBehaviour
 
         if (decrease)
         {
-            Debug.Log("Health" + value.health);
+           
             float fillValue = (go.GetComponent<skill_set>().armorcont- go.GetComponent<skill_set>().armor) /value.maxHealth;
             slider.value = fillValue;
         }
         else
         {
-            Debug.Log("Health" + value.health);
+        
             float fillValue = value.health / value.maxHealth;
             slider.value = fillValue;
         }

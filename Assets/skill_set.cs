@@ -81,7 +81,7 @@ public class skill_set : MonoBehaviour
        
         }
 
-        Debug.Log("manxx" + mana);
+       
     }
     public void armorControl()
     {

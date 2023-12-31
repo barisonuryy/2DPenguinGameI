@@ -104,7 +104,7 @@ public class weaponScript : MonoBehaviour
             weapTime = Time.time + coolDownWeap;
             Shoot();
             ammoCounter--;
-            Debug.Log("talhax" + ammoCounter);
+           
             if (ammoCounter <= 0&&isReloaded)
             {
                 haveAmmo = false;
@@ -191,12 +191,12 @@ public class weaponScript : MonoBehaviour
     {
         for (int i = b; i < 5; i++)
         {
-            Debug.Log("girdi" + i);
+           
             yield return new WaitForSeconds(1f);
             if (ammoCounter < 5)
             {
                 ammoCounter++;
-                Debug.Log("cCcAmo::" + ammoCounter);
+               
                 haveAmmo = true;
                 reloadedAmmo = true;
             }

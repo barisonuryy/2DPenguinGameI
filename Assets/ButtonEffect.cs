@@ -35,7 +35,7 @@ public class ButtonEffect : MonoBehaviour
                 }
                
                    
-                Debug.Log("eulerdeier:::"+item.transform.eulerAngles.z);
+                
 
                 if (item.transform.position.y<=-3.6f)
                 item.transform.Translate(Vector2.up*Time.deltaTime*1.5f);
@@ -50,7 +50,7 @@ public class ButtonEffect : MonoBehaviour
     {
         if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
-            Debug.Log("BUTTONA BASILDI");
+           
             isShiftable = true;
             ladder.SetActive(true);
         }

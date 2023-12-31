@@ -51,8 +51,7 @@ public class bossHealthSystem : MonoBehaviour
        
         isAttacking = playerM.GetComponent<BasicMech>().attack;
         vectorPlayer = playerM.GetComponent<Transform>().localScale.x;
-        Debug.Log("pNin deger"+vectorPlayer);
-        Debug.Log("bosun can� :" + bossHealth);
+     
         StartCoroutine(updateHealAn());
         if (bossHealth < 100 && cdHeal < Time.time)
         {
@@ -97,7 +96,7 @@ public class bossHealthSystem : MonoBehaviour
             anim.SetBool("madTime", true);
             yield return new WaitForSeconds(1f);
             isVulnerable = false;
-            Debug.Log("DELIRME VAKT�");
+           
           
 
         }
@@ -117,7 +116,7 @@ public class bossHealthSystem : MonoBehaviour
         {
             if (!isVulnerable)
             {
-                Debug.Log("Vuruldun");
+               
                 bossHealth -= 10;
                 Destroy(collision.gameObject, 0.01f);
             }
@@ -162,8 +161,6 @@ public class bossHealthSystem : MonoBehaviour
     public IEnumerator throwCharacter(float verticalPush,float horizontalPush,float decHealth)
     {
         playerM.GetComponent<BasicMech>().enabled = false;
-        Debug.Log("Kinder fırlatıldı");
-        Debug.Log("vectorPnin degeri:"+vectorPlayer);
         playerM.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2((-10 / 4) * vectorPlayer * horizontalPush, verticalPush));
         playerM.GetComponent<PlayerHealth>().health -= decHealth;
         yield return new WaitForSeconds(0.5f);

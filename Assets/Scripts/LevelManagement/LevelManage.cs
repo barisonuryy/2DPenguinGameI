@@ -36,7 +36,7 @@ public class LevelManage : MonoBehaviour
     {
      
         create = true;
-       //Debug.unityLogger.logEnabled = false;
+       
        if(SceneManager.GetActiveScene().buildIndex != 1)
         ammoCount =machineGun.GetComponent<weaponScript>().ammoCounter;
     }
@@ -64,7 +64,7 @@ public class LevelManage : MonoBehaviour
         create = false;
 
 
-        // Orijinal düðmenin özelliklerini yeni düðmeye kopyalayý
+        // Orijinal dï¿½ï¿½menin ï¿½zelliklerini yeni dï¿½ï¿½meye kopyalayï¿½
         p = GetComponentInChildren<Finish>().passed;
         if (PlayerPrefs.GetInt("generalHealth") == 0)
         {
@@ -100,8 +100,6 @@ public class LevelManage : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //PlayerPrefs.SetInt("counterforH", PlayerPrefs.GetInt("counterforH") + 1);
-            //Debug.Log("sayac degeri::::" + PlayerPrefs.GetInt("counterforH"));
             isFalled = true;
             SceneManager.LoadScene((SceneManager.GetActiveScene().name));
 
