@@ -4805,6 +4805,7 @@ GameObject:
   - component: {fileID: 582418007}
   - component: {fileID: 582418009}
   - component: {fileID: 582418008}
+  - component: {fileID: 582418010}
   m_Layer: 0
   m_Name: Kinder
   m_TagString: Player
@@ -4934,6 +4935,7 @@ MonoBehaviour:
   dashingPower: 48
   dashingTime: 0.2
   bc2d: {fileID: 582418004}
+  velocityBooster: 0
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -5168,6 +5170,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.2, y: -2}
   m_Size: {x: 0.4038477, y: 0.4038477}
   m_Direction: 0
+--- !u!114 &582418010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582417997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d3a43cce21e214db67b5572da88b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiControl: {fileID: 0}
+  healthControl: {fileID: 0}
+  mana: 0
+  maxMana: 0
+  isInarmor: 0
+  armorControll: 0
+  armorcont: 0
+  armor: 0
+  isInIncrease: 0
 --- !u!1 &657140370
 GameObject:
   m_ObjectHideFlags: 0

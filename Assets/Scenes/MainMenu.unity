@@ -1391,6 +1391,13 @@ MonoBehaviour:
   PauseClick: {fileID: 413909302}
   score: 0
   dead: 0
+  bulletUIObj: {fileID: 0}
+  bulletParent: {fileID: 0}
+  lightBolt: {fileID: 0}
+  machineGun: {fileID: 0}
+  boss: {fileID: 0}
+  isFalled: 0
+  value: 0
 --- !u!4 &1608477721
 Transform:
   m_ObjectHideFlags: 0
@@ -1831,7 +1838,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1608477720}
         m_TargetAssemblyTypeName: LevelManage, Assembly-CSharp
-        m_MethodName: restartGame
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

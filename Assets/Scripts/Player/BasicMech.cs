@@ -119,6 +119,18 @@ public class BasicMech : MonoBehaviour
 
                         enemy.GetComponentInParent<bossHealthSystem>().TakeDamage(35f);
                     }
+                    else if (enemy.gameObject.name == "Minotaur")
+                    {
+                        enemy.GetComponentInParent<MinotaurHealth>().TakeDamageMinotaur(10);
+                    }
+                    else if (enemy.gameObject.name == "Goblin")
+                    {
+                        enemy.GetComponentInParent<GoblinHealth>().TakeDamageGoblin(20);
+                    }
+                    else if (enemy.gameObject.name == "Trex")
+                    {
+                        enemy.GetComponentInParent<TrexHealth>().TakeDamageTrex(25);
+                    }
 
                 }
             }
@@ -189,6 +201,7 @@ public class BasicMech : MonoBehaviour
         {
             return;
         }
+       if(GetComponent<effectofObject>()!=null)
         canUseBoost = GetComponent<effectofObject>().inRope;
         if (canUseBoost)
         {

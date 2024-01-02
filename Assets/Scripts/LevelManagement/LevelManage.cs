@@ -132,6 +132,12 @@ public class LevelManage : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(1);
+        Time.timeScale = 1;
+    }
     public void exitGame()
     {
         Application.Quit();
