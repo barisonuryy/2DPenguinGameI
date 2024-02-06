@@ -20,6 +20,7 @@ TagManager:
   - Rope
   - Archer
   - Arrow
+  - Warrior
   layers:
   - Default
   - TransparentFX

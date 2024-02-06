@@ -241,26 +241,7 @@ public class BasicMech : MonoBehaviour
         else slide = false;
         
     }
-  /*  void Glide()
-    {
-        if (Input.GetButton("Jump") && rb.velocity.y <= 0)
-        {
-
-            rb.velocity = new Vector2(rb.velocity.x, -glidingspeed);
-            if(dirSlide>0)
-            gameObject.transform.rotation= Quaternion.Euler(0, 0, -90);
-            if(dirSlide<0)
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
-            rb.gravityScale = 0f;
-
-        }
-        else
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            rb.gravityScale = 5f;
-        }
-
-    }*/
+  
 
 }
    

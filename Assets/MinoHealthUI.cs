@@ -27,7 +27,7 @@ public class MinoHealthUI : MonoBehaviour
         slider.maxValue = maxHealth;
         slider.value = health;
         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Color.red, Color.green, slider.normalizedValue);
-        Debug.Log(slider.normalizedValue);
+ 
 
 
 

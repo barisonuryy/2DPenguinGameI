@@ -36,7 +36,7 @@ public class meleeAttack : MonoBehaviour
     private void Start()
     {
         animLength = animationClip.length;
-        Debug.Log("Animasyonun uzunuluğu"+animLength);
+      
     }
 
     private void Update()
