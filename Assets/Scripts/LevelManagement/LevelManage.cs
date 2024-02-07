@@ -31,6 +31,7 @@ public class LevelManage : MonoBehaviour
     bool isIn;
     float bossHealth;
     public float value;
+    [SerializeField] private GameObject mainCharacter;
 
     void Start()
     {
@@ -114,6 +115,19 @@ public class LevelManage : MonoBehaviour
     private void playScoreAnim()
     {
 
+    }
+
+    public void StopCharacter()
+    {
+        if (mainCharacter != null)
+        {
+            mainCharacter.GetComponent<BasicMech>().enabled = false;
+        }
+    }
+
+    public void PlayCharacter()
+    {
+        mainCharacter.GetComponent<BasicMech>().enabled = true;
     }
     public void PauseGame()
     {

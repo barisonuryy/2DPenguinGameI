@@ -5166,6 +5166,7 @@ MonoBehaviour:
   boss: {fileID: 0}
   isFalled: 0
   value: 1.85
+  mainCharacter: {fileID: 0}
 --- !u!4 &485788460
 Transform:
   m_ObjectHideFlags: 0
@@ -36788,6 +36789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1060477732, guid: 332b21a684312b34798ace98affe4eed, type: 3}
+      propertyPath: ccRange
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1060477732, guid: 332b21a684312b34798ace98affe4eed, type: 3}
       propertyPath: waitTime
       value: 2
