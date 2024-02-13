@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GoblinHealth : MonoBehaviour
@@ -9,7 +10,9 @@ public class GoblinHealth : MonoBehaviour
     public float goblinMaxHealth = 100f;
     [SerializeField] GameObject smoke;
     private bool isDead;
-   
+    [SerializeField] private int objIndex;
+    
+    [SerializeField] ParticleSystem prt;
 
     private Animator anim;
     // Start is called before the first frame update
@@ -18,13 +21,15 @@ public class GoblinHealth : MonoBehaviour
         anim = GetComponentInParent<Animator>();
         isDead = false;
         
+     
         GetComponentInChildren<MinoHealthUI>().setHealthUI(goblinHealth,goblinMaxHealth);
     }
 
     private void Update()
     {
+  
+   
         
-       
     }
 
     public void TakeDamageGoblin(float damage)
@@ -37,11 +42,31 @@ public class GoblinHealth : MonoBehaviour
             Destroy(gameObject,1f);
             isDead = true;
         }
+        
     }
 
     private void OnDestroy()
     {
         smoke.SetActive(true);
         smoke.transform.position=transform.root.position;
+    }
+    public void IncreaseHealth(float incHealth)
+    {
+        if (goblinHealth < goblinMaxHealth)
+        {
+            goblinHealth += (incHealth / goblinMaxHealth) * 100;
+            setParticleState();
+        }
+        else
+            goblinHealth = goblinMaxHealth;
+        GetComponentInChildren<MinoHealthUI>().setHealthUI(goblinHealth,goblinMaxHealth);
+
+    }
+
+    async void setParticleState()
+    {
+        prt.Play();
+        await Task.Delay(1500);
+        prt.Stop();
     }
 }

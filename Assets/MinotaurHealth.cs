@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class MinotaurHealth : MonoBehaviour
@@ -9,7 +10,7 @@ public class MinotaurHealth : MonoBehaviour
     public float MinoMaxHealth = 100f;
     [SerializeField] GameObject smoke;
     private bool isDead;
-   
+    [SerializeField] ParticleSystem prt;
 
     private Animator anim;
     // Start is called before the first frame update
@@ -49,5 +50,24 @@ public class MinotaurHealth : MonoBehaviour
     {
         smoke.SetActive(true);
         smoke.transform.position=transform.root.position;
+    }
+
+    public void IncreaseHealth(float incHealth)
+    {
+        if (MinoHealth < MinoMaxHealth)
+        {
+            MinoHealth += (incHealth / MinoMaxHealth) * 100;
+            setParticleState();
+        }
+        else
+            MinoHealth = MinoMaxHealth;
+        
+
+    }
+    async void setParticleState()
+    {
+        prt.Play();
+        await Task.Delay(1500);
+        prt.Stop();
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
@@ -46,6 +47,10 @@ public class witcherMovement : MonoBehaviour
         isCompleted = true;
         anim = GetComponent<Animator>();
         RandomValue = 1;
+        if (isCompleted)
+        { 
+            StartCoroutine(FirstForm());
+        }
 
     }
 
@@ -59,21 +64,6 @@ public class witcherMovement : MonoBehaviour
         
    
     }
-
-    void Update()
-    {
-
-
-        if (isCompleted)
-        { 
-            StartCoroutine(FirstForm());
-        }
-           
-          
-          
-     
-    }
-
     IEnumerator FirstForm()
     {
         Vector2 tempVal;
@@ -100,7 +90,7 @@ public class witcherMovement : MonoBehaviour
         yield return new WaitForSeconds(3f);
         isCompleted = true;
         StartCoroutine(SecondForm());
-        RandomValue = Random.Range(1, 2);
+    
     }
     IEnumerator SecondForm()
     {
@@ -121,7 +111,6 @@ public class witcherMovement : MonoBehaviour
              if (Mathf.Abs(tempMageVal.x - mainCharacter.transform.position.x) < ccRange)
              {
                  countCC++;
-                 Debug.Log(countCC);
              
              }
              yield return new WaitForSeconds(0.5f);
@@ -140,8 +129,42 @@ public class witcherMovement : MonoBehaviour
        
         yield return new WaitForSeconds(3f);
         isCompleted = true;
-        RandomValue = Random.Range(1, 2);
-        StartCoroutine(FirstForm());
+        StartCoroutine(ThirdForm());
+     
+    }
+
+   IEnumerator ThirdForm()
+   {
+       anim.SetBool("healthSpell",true);
+       
+        
+        Collider2D[] enemiesToHeal = Physics2D.OverlapBoxAll(transform.GetChild(0).transform.GetChild(0).transform.position, new Vector2(hBoxX, hBoxY), 0);
+        foreach (var enemies in enemiesToHeal)
+        {
+            Debug.Log(enemies.gameObject.name);
+
+            if (enemies.CompareTag("Archer"))
+                {
+                   enemies.gameObject.GetComponent<GoblinHealth>().IncreaseHealth(50);
+                                 
+                }
+            if (enemies.gameObject.name == "Minotaur")
+            {
+                
+                enemies.gameObject.GetComponent<MinotaurHealth>().IncreaseHealth(50);
+                                 
+            }
+              
+       
+
+        }
+        yield return new WaitWhile(() => isHealSeqComplete== true);
+        anim.SetBool("healthSpell",false);
+        yield return new WaitForSeconds(0.25f);
+            StartCoroutine(FirstForm());
+     
+      
+       
     }
 
 
