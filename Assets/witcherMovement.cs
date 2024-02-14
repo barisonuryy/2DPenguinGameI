@@ -29,6 +29,8 @@ public class witcherMovement : MonoBehaviour
     [SerializeField] private GameObject mainCharacter;
     [SerializeField] private GameObject levelManage;
     [SerializeField] private GameObject warningObject;
+    [SerializeField] private GameObject dangerousUI;
+    [SerializeField] private GameObject[] stunnedUI;
     [SerializeField] private float maxValue, minValue;
     private FadeInFadeOut fd;
     private SpriteRenderer warningObj;
@@ -64,7 +66,7 @@ public class witcherMovement : MonoBehaviour
         
    
     }
-    IEnumerator FirstForm()
+  public IEnumerator FirstForm()
     {
         Vector2 tempVal;
         canPassFadeIn = false;
@@ -103,27 +105,41 @@ public class witcherMovement : MonoBehaviour
         yield return new WaitWhile(() => isCCSeqCompletePlayer == true);
         anim.SetBool("ccSpell",false);
         yield return new WaitForSeconds(0.25f);
-        tempVal = new Vector2(mainCharacter.transform.position.x, 0);
         tempMageVal = gameObject.transform.position;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
          for (int i = 0; i < 4; i++)
          {
+             
              if (Mathf.Abs(tempMageVal.x - mainCharacter.transform.position.x) < ccRange)
              {
+                 dangerousUI.SetActive(true);
                  countCC++;
              
              }
+             else
+             {
+                 dangerousUI.SetActive(false);
+                 
+             }
+           
              yield return new WaitForSeconds(0.5f);
          }
-          
+         dangerousUI.SetActive(false);  
         if (countCC >= 4)
         {
+            foreach (var variable in stunnedUI)
+            {
+                variable.SetActive(true);
+            }
             mainCharacter.GetComponent<BasicMech>().enabled = false;
             mainCharacter.GetComponent<Rigidbody2D>().velocity =Vector2.zero;
             mainCharacter.GetComponent<Animator>().enabled = false;
         }
-         
         yield return new WaitForSeconds(2f);
+        foreach (var variable in stunnedUI)
+        {
+            variable.SetActive(false);
+        }
         mainCharacter.GetComponent<Animator>().enabled = true;
         mainCharacter.GetComponent<BasicMech>().enabled = true;
        

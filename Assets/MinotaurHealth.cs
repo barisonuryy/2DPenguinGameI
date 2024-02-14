@@ -11,7 +11,7 @@ public class MinotaurHealth : MonoBehaviour
     [SerializeField] GameObject smoke;
     private bool isDead;
     [SerializeField] ParticleSystem prt;
-
+    private bool canContAttack;
     private Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -26,13 +26,15 @@ public class MinotaurHealth : MonoBehaviour
     {
         
         GetComponentInChildren<MinoHealthUI>().setHealthUI(MinoHealth,MinoMaxHealth);
+        canContAttack = GetComponent<meleeAttack>().continueAttack;
+    
     }
 
     public void TakeDamageMinotaur(float damage)
     {
         MinoHealth -= damage;
         
-        if (!isDead)
+        if (!isDead&&!canContAttack)
         {
             anim.SetTrigger("isHurt");
         } 

@@ -22,6 +22,7 @@ public class meleeAttack : MonoBehaviour
     [SerializeField] AnimationClip animationClip;
     private float animLength;
 
+    public bool continueAttack;
     //References
     private Animator anim;
     private PlayerHealth playerHealth;
@@ -36,7 +37,7 @@ public class meleeAttack : MonoBehaviour
     private void Start()
     {
         animLength = animationClip.length;
-      
+        continueAttack = false;
     }
 
     private void Update()
@@ -50,10 +51,17 @@ public class meleeAttack : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("meleeAttack");
+                continueAttack = true;
                 Invoke("DamagePlayer",animLength-0.05f);
                 
             }
+           
         }
+        else
+        {
+            continueAttack = false;
+        }
+        
 
         if (enemyPatrol != null)
             enemyPatrol.enabled = !PlayerInSight();
@@ -81,7 +89,10 @@ public class meleeAttack : MonoBehaviour
     private void DamagePlayer()
     {
         if (PlayerInSight())
+        {
             playerHealth.TakeDamage(damage);
             playerHealth.TakeDamageP(true);
+        }
+           
     }
 }

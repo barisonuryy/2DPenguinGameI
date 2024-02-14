@@ -26,7 +26,8 @@ public class WitcherScriptControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GetComponent<witcherMovement>().enabled = true;
-            
+            StartCoroutine(GetComponent<witcherMovement>().FirstForm());
+
         }
     }
     
@@ -36,12 +37,21 @@ public class WitcherScriptControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetBool("walk",true);
-            if (Math.Abs(Player.position.x - gameObject.transform.position.x) < RangePlayer)
+            if (Math.Abs(Player.position.x - gameObject.transform.position.x) > RangePlayer)
             {
 
                 Vector2 targetPoint= Vector2.MoveTowards(gameObject.transform.position,
                     new Vector2(Player.position.x, gameObject.transform.position.y), Time.deltaTime);
                 gameObject.transform.position = targetPoint;
+            }
+            if (Player.position.x - gameObject.transform.position.x < 0)
+            {
+                gameObject.transform.rotation=Quaternion.Euler(Vector3.zero);
+            
+            }
+            else if (Player.position.x - gameObject.transform.position.x > 0)
+            {
+                gameObject.transform.rotation=Quaternion.Euler(0,180,0);
             }
             
         }
