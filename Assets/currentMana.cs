@@ -34,7 +34,7 @@ public class currentMana : MonoBehaviour
             image.enabled = true;
         }
         if (value.mana >= 10)
-            image.color = Color.green;
+            image.color = Color.cyan;
         else
             image.color = Color.magenta;
         float fillValue = value.mana / value.maxMana;

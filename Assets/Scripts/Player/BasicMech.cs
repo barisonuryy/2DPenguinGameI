@@ -39,9 +39,13 @@ public class BasicMech : MonoBehaviour
     GameObject boss;
     bool canUseBoost;
     float tempVBooster;
-
+    private int jumpCount;
+    [SerializeField] private float jumpCoolDown;
+    private float timerJump;
     private void Awake()
     {
+        timerJump = 0;
+        jumpCount = 0;
         boss = GameObject.Find("partBoss");
         rb=GetComponent<Rigidbody2D>(); 
         bc2d=GetComponent<BoxCollider2D>();
@@ -142,14 +146,24 @@ public class BasicMech : MonoBehaviour
     }
     void Jump(bool isGrounded)
     {
-        if (isGrounded && Input.GetButton("Vertical"))
+        if (isGrounded && Input.GetButtonUp("Vertical")&&jumpCount<=2)
         {
+            jumpCount++;
             jump = true;
             directionY = Input.GetAxis("Vertical");
             rb.velocity = new Vector2(rb.velocity.x, verticalS);
            
         }
-        else jump = false;
+        else
+        {
+            if (timerJump < Time.time)
+            {
+                jumpCount = 0;
+                timerJump = Time.time + jumpCoolDown;
+            }
+            
+            jump = false;
+        }
            
     }
     void Flip()
@@ -188,7 +202,7 @@ public class BasicMech : MonoBehaviour
     }
     private bool isGrounded()
     {
-        float extraHeight = 3f;
+        float extraHeight = 2.5f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(bc2d.bounds.center, bc2d.bounds.size, 0f, Vector2.down, extraHeight, platformLayerMask);
         Vector3.Angle(Vector2.up,rb.velocity);
 

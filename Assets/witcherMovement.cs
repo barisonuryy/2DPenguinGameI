@@ -39,6 +39,7 @@ public class witcherMovement : MonoBehaviour
     [SerializeField]
     private float hBoxY;
 
+    private bool canConAttack;
     private int countCC;
     private bool isCompleted;
     private float RandomValue;
@@ -56,6 +57,27 @@ public class witcherMovement : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        /*canConAttack = GetComponent<WitcherScriptControl>().canContinueAttack;
+        if (canConAttack&&isCompleted)
+        {
+            int val = Random.Range(1, 3);
+            
+            if (val == 1)
+            {
+                StartCoroutine(FirstForm());
+            }
+            else if (val==2)
+            {
+                StartCoroutine(SecondForm());
+            }
+            else
+                StartCoroutine(ThirdForm());
+
+            canConAttack = false;
+        }*/
+    }
 
 
     private void OnDrawGizmos()
@@ -89,7 +111,7 @@ public class witcherMovement : MonoBehaviour
         anims[0].SetActive(true);
         anims[0].transform.position = tempVal + new Vector2(0, yPositionAoe);
         yield return new WaitWhile(() => isFlameSeqComplete == true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         isCompleted = true;
         StartCoroutine(SecondForm());
     
@@ -143,7 +165,7 @@ public class witcherMovement : MonoBehaviour
         mainCharacter.GetComponent<Animator>().enabled = true;
         mainCharacter.GetComponent<BasicMech>().enabled = true;
        
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         isCompleted = true;
         StartCoroutine(ThirdForm());
      
@@ -151,10 +173,10 @@ public class witcherMovement : MonoBehaviour
 
    IEnumerator ThirdForm()
    {
+       isCompleted = false;
+       isHealSeqComplete = false;
        anim.SetBool("healthSpell",true);
-       
-        
-        Collider2D[] enemiesToHeal = Physics2D.OverlapBoxAll(transform.GetChild(0).transform.GetChild(0).transform.position, new Vector2(hBoxX, hBoxY), 0);
+       Collider2D[] enemiesToHeal = Physics2D.OverlapBoxAll(transform.GetChild(0).transform.GetChild(0).transform.position, new Vector2(hBoxX, hBoxY), 0);
         foreach (var enemies in enemiesToHeal)
         {
             Debug.Log(enemies.gameObject.name);
@@ -176,8 +198,9 @@ public class witcherMovement : MonoBehaviour
         }
         yield return new WaitWhile(() => isHealSeqComplete== true);
         anim.SetBool("healthSpell",false);
-        yield return new WaitForSeconds(0.25f);
-            StartCoroutine(FirstForm());
+        yield return new WaitForSeconds(1f);
+        isCompleted = true;
+        StartCoroutine(FirstForm());
      
       
        

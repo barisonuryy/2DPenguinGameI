@@ -75,6 +75,11 @@ public class PlayerHealth : MonoBehaviour
         {
             Invoke("endLevelShowUI", 1f);
         }
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
         PlayerPrefs.SetFloat("playerHealth", health);
     }
     private void DestroyObj()

@@ -22,6 +22,6 @@ public class LevelLoadManage : MonoBehaviour
     }
     public void LoadLevel2()
     {
-        SceneManager.LoadScene("SecondScene");
+        SceneManager.LoadScene("ThirdScene");
     }
 }

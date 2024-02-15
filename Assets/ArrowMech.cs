@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -25,9 +26,22 @@ public class ArrowMech : MonoBehaviour
                hasHit = true;
                Destroy(gameObject,0.25f);
            }
+
+           if (!collision.gameObject.CompareTag("Player"))
+           {
+               gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+           }
            
        }
-   
+
+       private void OnCollisionExit2D(Collision2D other)
+       {
+           if (!other.gameObject.CompareTag("Player"))
+           {
+               gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+           }
+       }
+
        private void FixedUpdate()
        {
            if (!hasHit)

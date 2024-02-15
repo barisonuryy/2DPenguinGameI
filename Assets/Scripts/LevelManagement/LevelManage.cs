@@ -190,7 +190,7 @@ public class LevelManage : MonoBehaviour
                 bulletCopyUI = Instantiate(bulletUIObj, new Vector3(bulletUIObj.transform.position.x + distance + ((float)i / range), bulletUIObj.transform.position.y, bulletUIObj.transform.position.z), Quaternion.identity);
 
                 bulletCopyUI.transform.SetParent(bulletUIObj.transform.parent);
-                bulletCopyUI.transform.localScale = new Vector3(0.796875f, 0.778125f, 1);
+                bulletCopyUI.transform.localScale = new Vector3(0.5f, 0.5f, 1);
             }
         }
       

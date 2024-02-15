@@ -22,20 +22,19 @@ public class GoblinHealth : MonoBehaviour
         isDead = false;
         
      
-        GetComponentInChildren<MinoHealthUI>().setHealthUI(goblinHealth,goblinMaxHealth);
+        
     }
 
     private void Update()
     {
   
-   
+        GetComponentInChildren<MinoHealthUI>().setHealthUI(goblinHealth,goblinMaxHealth);
         
     }
 
     public void TakeDamageGoblin(float damage)
     {
         goblinHealth -= damage;
-        GetComponentInChildren<MinoHealthUI>().setHealthUI(goblinHealth,goblinMaxHealth);
         if (goblinHealth <= 0&&!isDead)
         {
             GetComponentInChildren<goblinAttack>().enabled = false;
@@ -59,7 +58,7 @@ public class GoblinHealth : MonoBehaviour
         }
         else
             goblinHealth = goblinMaxHealth;
-        GetComponentInChildren<MinoHealthUI>().setHealthUI(goblinHealth,goblinMaxHealth);
+     
 
     }
 

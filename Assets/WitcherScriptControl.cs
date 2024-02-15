@@ -7,7 +7,7 @@ public class WitcherScriptControl : MonoBehaviour
 {
     [SerializeField] private float RangePlayer;
     [SerializeField] private Transform Player;
-
+    public bool canContinueAttack;
     private Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -62,6 +62,7 @@ public class WitcherScriptControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetBool("walk",false);
+            canContinueAttack = false;
             GetComponent<witcherMovement>().enabled = false;
             
         }
